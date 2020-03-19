@@ -9,16 +9,14 @@ function merge(w1, w2){
   
   var index1=w1.length-1;
   var index2=w2.length-1;
-  var in1=w1[index1];
-  var in2=w2[index2];
   x=w1.length+w2.length-1;
   
-  while(x>=0){
-    if(in1>in2){
-      w1[x]=in1;
+  while(x>0){
+    if(v1[index1]>=v2[index2]){
+      w1[x]=v1[index1];
       --index1;
     }else{
-      w1[x]=in2;
+      w1[x]=v2[index2];
       --index2;
     }
     --x;
