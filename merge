@@ -1,4 +1,6 @@
-/* Question: 
+//this is what you need to do, i have made some changes.
+
+/* Question:
  * write a function name "merge" that gets two sorted arrays and merges
  * both to the first array.
  * the return value will be the first array.
@@ -7,21 +9,20 @@
 function merge(w1, w2){ 
   // add code here
   
-  var index1=w1.length-1;
-  var index2=w2.length-1;
-  var in1=w1[index1];
-  var in2=w2[index2];
+  var i1=w1.length-1;
+  var i2=w2.length-1;
+
   x=w1.length+w2.length-1;
   
-  while(x>=0){
-    if(in1>in2){
-      w1[x]=in1;
-      --index1;
+  while(x>0){
+    if(v1[i1]>v2[i2]){
+      w1[x]=v1[i1];
+      i1--;
     }else{
-      w1[x]=in2;
-      --index2;
+      w1[x]=v2[i2];
+      i2--;
     }
-    --x;
+    x--;
   }
   
   return w1;
